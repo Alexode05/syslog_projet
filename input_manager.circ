@@ -84,7 +84,10 @@
       <a name="label" val="back"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(160,450)" name="Clock"/>
+    <comp lib="0" loc="(160,450)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clk"/>
+    </comp>
     <comp lib="0" loc="(160,480)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rst"/>

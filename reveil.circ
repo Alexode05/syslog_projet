@@ -20,10 +20,10 @@
   <lib desc="#Soc" name="11"/>
   <lib desc="file#LCD1602I2C_v5.0.circ" name="12"/>
   <lib desc="file#clock_manager.circ" name="13"/>
-  <lib desc="file#input_manager.circ" name="14"/>
-  <lib desc="file#display_manager.circ" name="15"/>
-  <lib desc="file#horloge.circ" name="16"/>
-  <lib desc="file#alarm.circ" name="17"/>
+  <lib desc="file#display_manager.circ" name="14"/>
+  <lib desc="file#horloge.circ" name="15"/>
+  <lib desc="file#alarm.circ" name="16"/>
+  <lib desc="file#input_manager.circ" name="17"/>
   <lib desc="file#FSM_main.circ" name="18"/>
   <main name="main"/>
   <options>
@@ -64,6 +64,29 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(110,120)" name="Clock"/>
+    <comp lib="0" loc="(1280,260)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="2"/>
+      <a name="bit13" val="2"/>
+      <a name="bit14" val="2"/>
+      <a name="bit15" val="2"/>
+      <a name="bit16" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="17"/>
+      <a name="spacing" val="2"/>
+    </comp>
     <comp lib="0" loc="(130,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="RESET"/>
@@ -76,28 +99,84 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Btn_2"/>
     </comp>
+    <comp lib="0" loc="(1330,430)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit0" val="2"/>
+      <a name="bit1" val="2"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="0"/>
+      <a name="bit3" val="2"/>
+      <a name="bit4" val="2"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="17"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1600,460)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(1630,470)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit0" val="2"/>
+      <a name="bit1" val="2"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="0"/>
+      <a name="bit3" val="2"/>
+      <a name="bit4" val="2"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="17"/>
+      <a name="spacing" val="2"/>
+    </comp>
     <comp lib="13" loc="(400,580)" name="clock_manager"/>
-    <comp lib="14" loc="(420,210)" name="input_manager"/>
-    <comp lib="15" loc="(1830,210)" name="display_manager"/>
-    <comp lib="16" loc="(1260,210)" name="Horloge"/>
-    <comp lib="17" loc="(1530,400)" name="Alarm"/>
+    <comp lib="14" loc="(1990,210)" name="display_manager"/>
+    <comp lib="15" loc="(1260,210)" name="Horloge"/>
+    <comp lib="16" loc="(1570,400)" name="Alarm"/>
+    <comp lib="17" loc="(420,210)" name="input_manager"/>
     <comp lib="18" loc="(760,210)" name="FSM_Main"/>
     <wire from="(110,120)" to="(160,120)"/>
+    <wire from="(1280,260)" to="(1280,430)"/>
+    <wire from="(1280,430)" to="(1330,430)"/>
     <wire from="(130,140)" to="(140,140)"/>
     <wire from="(130,210)" to="(200,210)"/>
     <wire from="(130,230)" to="(200,230)"/>
-    <wire from="(140,140)" to="(140,250)"/>
+    <wire from="(140,140)" to="(140,270)"/>
     <wire from="(140,140)" to="(500,140)"/>
-    <wire from="(140,250)" to="(140,600)"/>
-    <wire from="(140,250)" to="(200,250)"/>
+    <wire from="(140,270)" to="(140,600)"/>
+    <wire from="(140,270)" to="(200,270)"/>
     <wire from="(140,600)" to="(180,600)"/>
     <wire from="(1550,140)" to="(1550,230)"/>
-    <wire from="(1550,230)" to="(1610,230)"/>
+    <wire from="(1550,230)" to="(1770,230)"/>
     <wire from="(1570,120)" to="(1570,210)"/>
-    <wire from="(1570,210)" to="(1610,210)"/>
-    <wire from="(160,120)" to="(160,580)"/>
+    <wire from="(1570,210)" to="(1770,210)"/>
+    <wire from="(1570,420)" to="(1610,420)"/>
+    <wire from="(1570,440)" to="(1610,440)"/>
+    <wire from="(160,120)" to="(160,250)"/>
     <wire from="(160,120)" to="(520,120)"/>
+    <wire from="(160,250)" to="(160,580)"/>
+    <wire from="(160,250)" to="(200,250)"/>
     <wire from="(160,580)" to="(180,580)"/>
+    <wire from="(1600,460)" to="(1610,460)"/>
     <wire from="(400,600)" to="(910,600)"/>
     <wire from="(420,210)" to="(540,210)"/>
     <wire from="(420,230)" to="(540,230)"/>
@@ -114,11 +193,11 @@
     <wire from="(930,140)" to="(930,250)"/>
     <wire from="(930,250)" to="(1040,250)"/>
     <wire from="(930,250)" to="(930,420)"/>
-    <wire from="(930,420)" to="(1310,420)"/>
+    <wire from="(930,420)" to="(1350,420)"/>
     <wire from="(950,120)" to="(1570,120)"/>
     <wire from="(950,120)" to="(950,210)"/>
     <wire from="(950,210)" to="(1040,210)"/>
     <wire from="(950,210)" to="(950,400)"/>
-    <wire from="(950,400)" to="(1310,400)"/>
+    <wire from="(950,400)" to="(1350,400)"/>
   </circuit>
 </project>
