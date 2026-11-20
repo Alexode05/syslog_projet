@@ -18,6 +18,13 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
+  <lib desc="file#LCD1602I2C_v5.0.circ" name="12"/>
+  <lib desc="file#clock_manager.circ" name="13"/>
+  <lib desc="file#input_manager.circ" name="14"/>
+  <lib desc="file#display_manager.circ" name="15"/>
+  <lib desc="file#horloge.circ" name="16"/>
+  <lib desc="file#alarm.circ" name="17"/>
+  <lib desc="file#FSM_main.circ" name="18"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -56,5 +63,62 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(110,120)" name="Clock"/>
+    <comp lib="0" loc="(130,140)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="RESET"/>
+    </comp>
+    <comp lib="0" loc="(130,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Btn_1"/>
+    </comp>
+    <comp lib="0" loc="(130,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Btn_2"/>
+    </comp>
+    <comp lib="13" loc="(400,580)" name="clock_manager"/>
+    <comp lib="14" loc="(420,210)" name="input_manager"/>
+    <comp lib="15" loc="(1830,210)" name="display_manager"/>
+    <comp lib="16" loc="(1260,210)" name="Horloge"/>
+    <comp lib="17" loc="(1530,400)" name="Alarm"/>
+    <comp lib="18" loc="(760,210)" name="FSM_Main"/>
+    <wire from="(110,120)" to="(160,120)"/>
+    <wire from="(130,140)" to="(140,140)"/>
+    <wire from="(130,210)" to="(200,210)"/>
+    <wire from="(130,230)" to="(200,230)"/>
+    <wire from="(140,140)" to="(140,250)"/>
+    <wire from="(140,140)" to="(500,140)"/>
+    <wire from="(140,250)" to="(140,600)"/>
+    <wire from="(140,250)" to="(200,250)"/>
+    <wire from="(140,600)" to="(180,600)"/>
+    <wire from="(1550,140)" to="(1550,230)"/>
+    <wire from="(1550,230)" to="(1610,230)"/>
+    <wire from="(1570,120)" to="(1570,210)"/>
+    <wire from="(1570,210)" to="(1610,210)"/>
+    <wire from="(160,120)" to="(160,580)"/>
+    <wire from="(160,120)" to="(520,120)"/>
+    <wire from="(160,580)" to="(180,580)"/>
+    <wire from="(400,600)" to="(910,600)"/>
+    <wire from="(420,210)" to="(540,210)"/>
+    <wire from="(420,230)" to="(540,230)"/>
+    <wire from="(420,250)" to="(540,250)"/>
+    <wire from="(500,140)" to="(500,290)"/>
+    <wire from="(500,140)" to="(930,140)"/>
+    <wire from="(500,290)" to="(540,290)"/>
+    <wire from="(520,120)" to="(520,270)"/>
+    <wire from="(520,120)" to="(950,120)"/>
+    <wire from="(520,270)" to="(540,270)"/>
+    <wire from="(910,230)" to="(1040,230)"/>
+    <wire from="(910,230)" to="(910,600)"/>
+    <wire from="(930,140)" to="(1550,140)"/>
+    <wire from="(930,140)" to="(930,250)"/>
+    <wire from="(930,250)" to="(1040,250)"/>
+    <wire from="(930,250)" to="(930,420)"/>
+    <wire from="(930,420)" to="(1310,420)"/>
+    <wire from="(950,120)" to="(1570,120)"/>
+    <wire from="(950,120)" to="(950,210)"/>
+    <wire from="(950,210)" to="(1040,210)"/>
+    <wire from="(950,210)" to="(950,400)"/>
+    <wire from="(950,400)" to="(1310,400)"/>
   </circuit>
 </project>

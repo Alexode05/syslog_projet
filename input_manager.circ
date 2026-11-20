@@ -55,11 +55,36 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="input_manager"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadBoard" val="TERASIC_DE10LITE"/>
+    <a name="downloadFrequency" val="2500000.0"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(160,450)" name="Pin">
+    <boardmap boardname="TERASIC_DE10LITE">
+      <mc key="/back" map="416,330"/>
+      <mc key="/btn_1" map="575,243"/>
+      <mc key="/btn_2" map="575,285"/>
+      <mc key="/entrer" map="393,330"/>
+      <mc key="/next_state" map="370,330"/>
+      <mc key="/rst" pmap="371_355_9"/>
+    </boardmap>
+    <comp lib="0" loc="(1050,260)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="clk"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="next_state"/>
+      <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(1050,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="entrer"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1050,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="back"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(160,450)" name="Clock"/>
     <comp lib="0" loc="(160,480)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rst"/>
@@ -72,27 +97,15 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="btn_2"/>
     </comp>
-    <comp lib="0" loc="(990,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="next_state"/>
-      <a name="output" val="true"/>
+    <comp loc="(500,260)" name="debouncer">
+      <a name="label" val="debouncer_1"/>
     </comp>
-    <comp lib="0" loc="(990,290)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="entrer"/>
-      <a name="output" val="true"/>
+    <comp loc="(500,350)" name="debouncer">
+      <a name="label" val="debouncer_2"/>
     </comp>
-    <comp lib="0" loc="(990,320)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="back"/>
-      <a name="output" val="true"/>
+    <comp loc="(880,260)" name="event_decoder">
+      <a name="label" val="event_decoder_1"/>
     </comp>
-    <comp loc="(500,260)" name="debouncer"/>
-    <comp loc="(500,350)" name="debouncer"/>
-    <comp loc="(880,260)" name="event_decoder"/>
     <wire from="(160,450)" to="(220,450)"/>
     <wire from="(160,480)" to="(230,480)"/>
     <wire from="(190,260)" to="(280,260)"/>
@@ -115,13 +128,13 @@
     <wire from="(620,300)" to="(660,300)"/>
     <wire from="(630,320)" to="(630,480)"/>
     <wire from="(630,320)" to="(660,320)"/>
-    <wire from="(880,260)" to="(990,260)"/>
+    <wire from="(880,260)" to="(1050,260)"/>
     <wire from="(880,280)" to="(910,280)"/>
     <wire from="(880,300)" to="(890,300)"/>
     <wire from="(890,300)" to="(890,320)"/>
-    <wire from="(890,320)" to="(990,320)"/>
+    <wire from="(890,320)" to="(1050,320)"/>
     <wire from="(910,280)" to="(910,290)"/>
-    <wire from="(910,290)" to="(990,290)"/>
+    <wire from="(910,290)" to="(1050,290)"/>
   </circuit>
   <circuit name="event_decoder">
     <a name="appearance" val="logisim_evolution"/>

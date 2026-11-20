@@ -19,7 +19,7 @@
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
   <lib desc="file#LCD1602I2C_v5.0.circ" name="12"/>
-  <main name="main"/>
+  <main name="display_manager"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -52,9 +52,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="display_manager">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="display_manager"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="128.0"/>
     <comp lib="0" loc="(1490,1020)" name="Pin">
