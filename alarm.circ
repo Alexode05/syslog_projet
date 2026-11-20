@@ -18,7 +18,6 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#horloge.circ" name="12"/>
   <main name="Alarm"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -211,8 +210,8 @@
     </comp>
     <comp lib="1" loc="(680,790)" name="AND Gate"/>
     <comp lib="1" loc="(680,950)" name="AND Gate"/>
-    <comp lib="12" loc="(1190,770)" name="Hours_Counter"/>
-    <comp lib="12" loc="(1190,930)" name="Minutes_Counter"/>
+    <comp loc="(1190,770)" name="Hour_counter_alarm"/>
+    <comp loc="(1190,930)" name="minute_counter_alarm"/>
     <wire from="(1190,770)" to="(1740,770)"/>
     <wire from="(1190,930)" to="(1740,930)"/>
     <wire from="(250,610)" to="(470,610)"/>
@@ -228,7 +227,6 @@
     <wire from="(560,770)" to="(560,930)"/>
     <wire from="(560,770)" to="(630,770)"/>
     <wire from="(560,930)" to="(630,930)"/>
-    <wire from="(630,930)" to="(630,940)"/>
     <wire from="(680,790)" to="(970,790)"/>
     <wire from="(680,950)" to="(970,950)"/>
     <wire from="(880,350)" to="(880,810)"/>
@@ -464,5 +462,127 @@
     <wire from="(960,960)" to="(960,1050)"/>
     <wire from="(980,720)" to="(980,920)"/>
     <wire from="(980,920)" to="(1010,920)"/>
+  </circuit>
+  <circuit name="Hour_counter_alarm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Hour_counter_alarm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1050,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Hours"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1050,620)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Carry"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(110,500)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(120,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(120,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="0" loc="(120,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(120,430)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(120,450)" name="Constant"/>
+    <comp lib="4" loc="(370,400)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="max" val="0x17"/>
+      <a name="width" val="5"/>
+    </comp>
+    <wire from="(110,500)" to="(370,500)"/>
+    <wire from="(120,230)" to="(270,230)"/>
+    <wire from="(120,270)" to="(240,270)"/>
+    <wire from="(120,320)" to="(210,320)"/>
+    <wire from="(120,430)" to="(370,430)"/>
+    <wire from="(120,450)" to="(370,450)"/>
+    <wire from="(210,320)" to="(210,420)"/>
+    <wire from="(210,420)" to="(370,420)"/>
+    <wire from="(240,270)" to="(240,470)"/>
+    <wire from="(240,470)" to="(370,470)"/>
+    <wire from="(270,230)" to="(270,480)"/>
+    <wire from="(270,480)" to="(370,480)"/>
+    <wire from="(370,500)" to="(370,510)"/>
+    <wire from="(560,450)" to="(640,450)"/>
+    <wire from="(560,510)" to="(1050,510)"/>
+    <wire from="(640,450)" to="(640,620)"/>
+    <wire from="(640,620)" to="(1050,620)"/>
+  </circuit>
+  <circuit name="minute_counter_alarm">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="minute_counter_alarm"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1130,530)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Minutes"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(1160,640)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Carry"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(190,520)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(200,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(200,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Enable"/>
+    </comp>
+    <comp lib="0" loc="(200,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(200,450)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(200,470)" name="Constant"/>
+    <comp lib="4" loc="(450,420)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="max" val="0x3b"/>
+      <a name="width" val="6"/>
+    </comp>
+    <wire from="(190,520)" to="(450,520)"/>
+    <wire from="(200,250)" to="(350,250)"/>
+    <wire from="(200,290)" to="(320,290)"/>
+    <wire from="(200,340)" to="(290,340)"/>
+    <wire from="(200,450)" to="(450,450)"/>
+    <wire from="(200,470)" to="(450,470)"/>
+    <wire from="(290,340)" to="(290,440)"/>
+    <wire from="(290,440)" to="(450,440)"/>
+    <wire from="(320,290)" to="(320,490)"/>
+    <wire from="(320,490)" to="(450,490)"/>
+    <wire from="(350,250)" to="(350,500)"/>
+    <wire from="(350,500)" to="(450,500)"/>
+    <wire from="(450,520)" to="(450,530)"/>
+    <wire from="(640,470)" to="(720,470)"/>
+    <wire from="(640,530)" to="(1130,530)"/>
+    <wire from="(720,470)" to="(720,640)"/>
+    <wire from="(720,640)" to="(1160,640)"/>
   </circuit>
 </project>

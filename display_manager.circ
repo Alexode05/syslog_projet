@@ -583,10 +583,6 @@
       <a name="value" val="0x1e"/>
       <a name="width" val="6"/>
     </comp>
-    <comp lib="0" loc="(410,550)" name="Constant">
-      <a name="value" val="0x1e"/>
-      <a name="width" val="6"/>
-    </comp>
     <comp lib="0" loc="(410,630)" name="Constant">
       <a name="value" val="0x28"/>
       <a name="width" val="6"/>

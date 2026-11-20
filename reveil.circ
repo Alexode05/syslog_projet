@@ -18,15 +18,15 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#countdown.circ" name="12"/>
-  <lib desc="file#input_manager.circ" name="13"/>
-  <lib desc="file#alarm.circ" name="14"/>
+  <lib desc="file#input_manager.circ" name="12"/>
+  <lib desc="file#clock_manager.circ" name="13"/>
+  <lib desc="file#FSM_main.circ" name="14"/>
   <lib desc="file#LCD1602I2C_v5.0.circ" name="15"/>
-  <lib desc="file#horloge.circ" name="16"/>
-  <lib desc="file#stopwatch.circ" name="17"/>
-  <lib desc="file#display_manager.circ" name="18"/>
-  <lib desc="file#clock_manager.circ" name="19"/>
-  <lib desc="file#FSM_main.circ" name="20"/>
+  <lib desc="file#display_manager.circ" name="16"/>
+  <lib desc="file#alarm.circ" name="17"/>
+  <lib desc="file#horloge.circ" name="18"/>
+  <lib desc="file#countdown.circ" name="19"/>
+  <lib desc="file#stopwatch.circ" name="20"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -359,30 +359,20 @@
     <comp lib="1" loc="(300,990)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="12" loc="(1440,960)" name="countdown">
-      <a name="label" val="countdown_1"/>
-    </comp>
-    <comp lib="13" loc="(420,210)" name="input_manager">
+    <comp lib="12" loc="(420,210)" name="input_manager">
       <a name="label" val="input_manager_1"/>
     </comp>
-    <comp lib="14" loc="(1700,480)" name="Alarm">
-      <a name="label" val="Alarm_1"/>
-    </comp>
-    <comp lib="16" loc="(1440,290)" name="Horloge">
-      <a name="label" val="Horloge_1"/>
-    </comp>
-    <comp lib="17" loc="(1440,820)" name="stopwatch">
-      <a name="label" val="stopwatch_1"/>
-    </comp>
-    <comp lib="18" loc="(2250,530)" name="display_manager">
-      <a name="label" val="display_manager_1"/>
-    </comp>
-    <comp lib="19" loc="(400,580)" name="clock_manager">
+    <comp lib="13" loc="(400,580)" name="clock_manager">
       <a name="label" val="clock_manager_1"/>
     </comp>
-    <comp lib="20" loc="(890,210)" name="FSM_Main">
+    <comp lib="14" loc="(890,210)" name="FSM_Main">
       <a name="label" val="FSM_Main_1"/>
     </comp>
+    <comp lib="16" loc="(2250,530)" name="display_manager"/>
+    <comp lib="17" loc="(1700,480)" name="Alarm"/>
+    <comp lib="18" loc="(1440,290)" name="Horloge"/>
+    <comp lib="19" loc="(1440,960)" name="countdown"/>
+    <comp lib="20" loc="(1440,820)" name="stopwatch"/>
     <comp lib="5" loc="(2360,830)" name="7-Segment Display">
       <a name="active" val="false"/>
       <a name="label" val="L_7_Segment_Display_1"/>
