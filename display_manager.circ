@@ -562,13 +562,6 @@
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(1330,980)" name="Constant"/>
-    <comp lib="0" loc="(1340,690)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Unit"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="0" loc="(1430,900)" name="Constant">
       <a name="facing" val="north"/>
       <a name="value" val="0x0"/>
@@ -581,10 +574,17 @@
       <a name="facing" val="west"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(1540,880)" name="Pin">
+    <comp lib="0" loc="(1490,620)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Tens"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1490,690)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Unit"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
@@ -710,7 +710,7 @@
     <wire from="(1250,850)" to="(1320,850)"/>
     <wire from="(1250,910)" to="(1320,910)"/>
     <wire from="(1250,930)" to="(1290,930)"/>
-    <wire from="(1260,690)" to="(1340,690)"/>
+    <wire from="(1260,690)" to="(1490,690)"/>
     <wire from="(1290,920)" to="(1290,930)"/>
     <wire from="(1290,920)" to="(1320,920)"/>
     <wire from="(1330,980)" to="(1340,980)"/>
@@ -719,7 +719,9 @@
     <wire from="(1410,860)" to="(1410,880)"/>
     <wire from="(1410,860)" to="(1430,860)"/>
     <wire from="(1430,870)" to="(1430,900)"/>
-    <wire from="(1450,880)" to="(1540,880)"/>
+    <wire from="(1450,880)" to="(1480,880)"/>
+    <wire from="(1480,620)" to="(1480,880)"/>
+    <wire from="(1480,620)" to="(1490,620)"/>
     <wire from="(360,280)" to="(530,280)"/>
     <wire from="(410,400)" to="(470,400)"/>
     <wire from="(410,470)" to="(470,470)"/>
@@ -836,26 +838,25 @@
       <a name="label" val="BCD"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(820,200)" name="Pin">
+    <comp lib="0" loc="(820,190)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Segments"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="4" loc="(360,140)" name="ROM">
+    <comp lib="4" loc="(360,130)" name="ROM">
       <a name="addrWidth" val="4"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 4 7
-40 79 24 30 19 12 2 78
-0 10 6*7f
+3f 6 5b 4f 66 6d 7d 7
+7f 6f
 </a>
       <a name="dataWidth" val="7"/>
       <a name="label" val="BCD_Decoder"/>
     </comp>
     <wire from="(130,140)" to="(360,140)"/>
-    <wire from="(360,140)" to="(360,150)"/>
-    <wire from="(600,200)" to="(820,200)"/>
+    <wire from="(600,190)" to="(820,190)"/>
   </circuit>
   <circuit name="BCD_to_ASCII">
     <a name="appearance" val="logisim_evolution"/>
