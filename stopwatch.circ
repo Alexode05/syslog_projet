@@ -57,14 +57,14 @@
     <a name="circuit" val="stopwatch"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="128.0"/>
-    <comp lib="0" loc="(1210,640)" name="Pin">
+    <comp lib="0" loc="(1060,640)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Stopwatch_Minutes"/>
       <a name="output" val="true"/>
       <a name="width" val="6"/>
     </comp>
-    <comp lib="0" loc="(1440,660)" name="Pin">
+    <comp lib="0" loc="(1290,660)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Stopwatch_Hours"/>
@@ -87,38 +87,51 @@
       <a name="appearance" val="classic"/>
       <a name="label" val="Start_Stop"/>
     </comp>
-    <comp lib="0" loc="(980,620)" name="Pin">
+    <comp lib="0" loc="(240,470)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Stopwatch_Clear"/>
+    </comp>
+    <comp lib="0" loc="(830,620)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Stopwatch_Seconds"/>
       <a name="output" val="true"/>
       <a name="width" val="6"/>
     </comp>
-    <comp loc="(920,510)" name="Stopwatch_FSM"/>
-    <comp loc="(920,620)" name="Stopwatch_Counter"/>
-    <wire from="(240,220)" to="(670,220)"/>
-    <wire from="(240,280)" to="(660,280)"/>
-    <wire from="(240,340)" to="(650,340)"/>
-    <wire from="(240,410)" to="(640,410)"/>
-    <wire from="(640,410)" to="(640,550)"/>
-    <wire from="(640,550)" to="(700,550)"/>
-    <wire from="(640,600)" to="(640,680)"/>
-    <wire from="(640,600)" to="(920,600)"/>
-    <wire from="(640,680)" to="(700,680)"/>
-    <wire from="(650,340)" to="(650,660)"/>
-    <wire from="(650,660)" to="(700,660)"/>
-    <wire from="(660,280)" to="(660,530)"/>
-    <wire from="(660,530)" to="(660,640)"/>
-    <wire from="(660,530)" to="(700,530)"/>
-    <wire from="(660,640)" to="(700,640)"/>
-    <wire from="(670,220)" to="(670,510)"/>
-    <wire from="(670,510)" to="(670,620)"/>
-    <wire from="(670,510)" to="(700,510)"/>
-    <wire from="(670,620)" to="(700,620)"/>
-    <wire from="(920,510)" to="(920,600)"/>
-    <wire from="(920,620)" to="(980,620)"/>
-    <wire from="(920,640)" to="(1210,640)"/>
-    <wire from="(920,660)" to="(1440,660)"/>
+    <comp lib="1" loc="(620,780)" name="OR Gate"/>
+    <comp loc="(770,510)" name="Stopwatch_FSM"/>
+    <comp loc="(770,620)" name="Stopwatch_Counter"/>
+    <wire from="(240,220)" to="(520,220)"/>
+    <wire from="(240,280)" to="(510,280)"/>
+    <wire from="(240,340)" to="(500,340)"/>
+    <wire from="(240,410)" to="(490,410)"/>
+    <wire from="(240,470)" to="(480,470)"/>
+    <wire from="(450,530)" to="(450,640)"/>
+    <wire from="(450,530)" to="(550,530)"/>
+    <wire from="(450,640)" to="(450,840)"/>
+    <wire from="(450,640)" to="(550,640)"/>
+    <wire from="(450,840)" to="(640,840)"/>
+    <wire from="(480,470)" to="(480,760)"/>
+    <wire from="(480,760)" to="(570,760)"/>
+    <wire from="(490,410)" to="(490,550)"/>
+    <wire from="(490,550)" to="(550,550)"/>
+    <wire from="(490,600)" to="(490,680)"/>
+    <wire from="(490,600)" to="(770,600)"/>
+    <wire from="(490,680)" to="(550,680)"/>
+    <wire from="(500,340)" to="(500,660)"/>
+    <wire from="(500,660)" to="(550,660)"/>
+    <wire from="(510,280)" to="(510,800)"/>
+    <wire from="(510,800)" to="(570,800)"/>
+    <wire from="(520,220)" to="(520,510)"/>
+    <wire from="(520,510)" to="(520,620)"/>
+    <wire from="(520,510)" to="(550,510)"/>
+    <wire from="(520,620)" to="(550,620)"/>
+    <wire from="(620,780)" to="(640,780)"/>
+    <wire from="(640,780)" to="(640,840)"/>
+    <wire from="(770,510)" to="(770,600)"/>
+    <wire from="(770,620)" to="(830,620)"/>
+    <wire from="(770,640)" to="(1060,640)"/>
+    <wire from="(770,660)" to="(1290,660)"/>
   </circuit>
   <circuit name="Stopwatch_Counter">
     <a name="appearance" val="logisim_evolution"/>
